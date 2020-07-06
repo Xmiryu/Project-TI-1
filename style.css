@@ -1,0 +1,302 @@
+html  {
+    scroll-behavior: smooth;
+    background: radial-gradient(#0a0f2e, black) ;
+}
+body {
+    background: radial-gradient(#0a0f2e, black) ;
+    color: white;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    font-family: customFont;
+}
+@font-face {
+    font-family: customFont;
+    src: url(clone-machine/CloneMachine.otf);
+}
+
+header {
+    display: block;
+    text-align: center;
+    font-size: x-large;
+    margin: 0;
+    border:0;
+    padding: 0;
+}
+
+header2 {
+    display: block;
+    text-align: center;
+    font-size: large;
+    margin: 0;
+    border:0;
+    padding: 0;
+}
+
+nav {
+    list-style-type: none;
+    background-color: black;
+    border-bottom: 2px solid #4175f0;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    margin-bottom: 5px;
+    height: 30px;
+    overflow: hidden;
+    transition: all 1.5s ease;
+
+}
+nav:hover {
+
+    background: black;
+    height: 50px;
+    /*overflow: visible;*/
+    transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+
+}
+.navigation li {
+    float: left;
+    display: block;
+    align-items: center;
+    font-size: medium;
+}
+.navigation li a {
+    color: white;
+    font-size: medium;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+}
+.navigation li a:hover {
+    background-color: #4175f0;
+}
+
+svg {
+    align-content: center;
+    display: block;
+    margin: auto;
+}
+
+.content {
+    display: block;
+    color: white;
+}
+.content section {
+    display: none;
+    color: white;
+    text-align: center;
+}
+h1 {
+    color:white;
+}
+h2 {
+    color: white;
+    font-size: large;
+
+}
+.info  {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: large;
+
+}
+
+article.about {
+    text-align: justify;
+    margin: 10px;
+}
+
+circle.Sun {
+    transform-origin: center;
+    /*animation: sun 4s linear infinite;*/
+    fill: url(#grad1);
+}
+/*@keyframes sun {
+}*/
+
+circle.Merkury {
+    transform-origin: center;
+    animation: merkury 7s linear infinite;
+}
+@keyframes merkury {
+    0% {
+        transform: rotate(0deg) translate(5px);
+    }
+    100% {
+        transform: rotate(-360deg) translate(5px);
+    }    
+}
+
+circle.Wenus {
+    transform-origin: center;
+    animation: wenus 16s linear infinite;
+}
+@keyframes wenus {
+    0% {
+        transform: rotate(0deg) translate(8px);
+    }
+    100% {
+        transform: rotate(-360deg) translate(8px);
+    }    
+}
+
+circle.Ziemia {
+    fill: url(#earth);
+    transform-origin: center;
+    animation: ziemia 33s linear infinite;
+}
+@keyframes ziemia {
+    0% {
+        transform: rotate(0deg) translate(13px);
+    }
+    100% {
+        transform: rotate(-360deg) translate(13px);
+    }    
+}
+
+circle.Mars {
+    transform-origin: center;
+    animation: mars 55s linear infinite;
+}
+@keyframes mars {
+    0% {
+        transform: rotate(0deg) translate(20px);
+    }
+    100% {
+        transform: rotate(-360deg) translate(20px);
+    }    
+}
+
+circle.Jowisz {
+    transform-origin: center;
+    animation: jowisz 45s linear infinite;
+}
+@keyframes jowisz {
+    0% {
+        transform: rotate(0deg) translate(190px);
+    }
+    100% {
+        transform: rotate(-360deg) translate(190px);
+    }    
+}
+
+circle.Saturn {
+    transform-origin: center;
+    animation: saturn 90s linear infinite;
+}      
+@keyframes saturn {
+    0% {
+        transform: rotate(0deg) translate(250px);
+    }
+    100% {
+        transform: rotate(-360deg) translate(250px);
+    }
+}
+
+circle.Uran {
+    transform-origin: center;
+    animation: uran 180s linear infinite;
+}
+@keyframes uran {
+    0% {
+        transform: rotate(0deg) translate(340px);
+    }
+    100% {
+        transform: rotate(-360deg) translate(340px);
+    }    
+}
+
+circle.Neptun {
+    transform-origin: center;
+    animation: neptun 450s linear infinite;
+}
+@keyframes neptun {
+    0% {
+        transform: rotate(0deg) translate(410px);
+    }
+    100% {
+        transform: rotate(-360deg) translate(410px);
+    }    
+}
+
+.solid_wrapper ul {
+    list-style: none;
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 1px;
+    align-items: center;
+    padding-left: 5%;
+}
+.solid_wrapper ul li {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    /*margin: 0 10px;*/
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #4175f0;
+
+    /*background: radial-gradient(#0a0f2e, #4175f0);*/
+    background: radial-gradient(#233e97, black );
+    float: left;
+    transition: all 0.5s ease;
+}
+.solid_wrapper ul li:hover {
+    border: none;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}
+.solid_wrapper ul li:hover.Merkury {
+    background: rgb(214, 179, 138);
+    box-shadow: 0 0 15px beige;
+    transition: all 0.5s ease;
+    text-shadow: 0 0 15px grey;
+}
+.solid_wrapper ul li:hover.Wenus {
+    background: rgb(255, 123, 0);
+    box-shadow: 0 0 15px orange;
+    transition: all 0.5s ease;
+    text-shadow: 0 0 15px grey;
+}
+.solid_wrapper ul li:hover.Ziemia {
+    background: green;
+    box-shadow: 0 0 15px green;
+    transition: all 0.5s ease;
+    text-shadow: 0 0 15px grey;
+}
+.solid_wrapper ul li:hover.Mars {
+    background: red;
+    box-shadow: 0 0 15px red;
+    transition: all 0.5s ease;
+    text-shadow: 0 0 15px grey;
+}
+.solid_wrapper ul li:hover.Jowisz {
+    background: rgb(128, 83, 53);
+    box-shadow: 0 0 15px rgb(128, 83, 53);
+    transition: all 0.5s ease;
+    text-shadow: 0 0 15px grey;
+}
+.solid_wrapper ul li:hover.Saturn {
+    background: pink;
+    box-shadow: 0 0 15px pink;
+    transition: all 0.5s ease;
+    text-shadow: 0 0 15px grey;
+}
+.solid_wrapper ul li:hover.Uran {
+    background: lightblue;
+    box-shadow: 0 0 15px lightblue;
+    transition: all 0.5s ease;
+    text-shadow: 0 0 15px grey;
+}
+.solid_wrapper ul li:hover.Neptun {
+    background: navy;
+    box-shadow: 0 0 15px navy;
+    transition: all 0.5s ease;
+    text-shadow: 0 0 15px grey;
+}

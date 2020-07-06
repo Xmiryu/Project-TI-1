@@ -1,0 +1,55 @@
+Techniki Internetowe - Projekt I
+Dorota Stach
+
+Dokumentacja projektu
+Data oddania: 06.01.2020r
+
+
+Zawartość merytoryczna projektu
+    Tematyką wykonanego projektu jest Układ Słoneczny. 
+    Projekt "Układ Słoneczny" zawiera poglądową symulację ruchu planet wokół słońca wykonaną przy użyciu grafiki wektorowej SVG.
+    Dla każdej z planet wewnętrznych oraz zewnętrznych Układu Słonecznego przedstawione są krótkie opisy. W zakładce "O Układzie" dostępne są także ogólne informacje na temat Układu Słonecznego.
+
+Język HTML5
+    Wykorzystane zostały elementy semantyczne języka HTML5 takie jak: 
+    <header>, <nav>, <article>, <section>, <footer>.
+    Treści multimedialne zaprezentowane z wykorzystaniem <video>.
+
+Grafika w projekcie
+    Do stworzenia poglądowej symulacji ruchu planet wokół słońca wykorzystano grafikę wektorową SVG.
+    Obrazy .jpg znajdujące się w katalogu "imgs" zostały uyte jako tła planet poprzez przekształcenie ich przy pomocy <pattern>.
+
+JavaScript w projekcie
+    Wykorzystane elementy JavaScript:
+        getElementsByClassName,
+        getElementByID,
+        innerHTML,
+        addEventListener,
+        onload,
+        scrollBy,
+        style.dispay - none i block.
+    Stworzone funkcje (plik index.js):
+        showContent() - pokazuje zawartość wybranej sekcji w klasie "content". Lub chowa zawartość w przypadku gdy treść tej sekcji jest już wyświelona;
+        hideAllContent() - chowa zawartość klasy "content";
+        scrollWin_down() - przewija treść w dół, aby pokazać zawartość wyświetlonej sekcji klasy "content";
+        scrollWin_up() - przewija treść do góry.
+
+Dodatkowe funkcjonalności aplikacji 
+    W projekcie wykorzystano technologię WebWorker do stworzenia licznika czasu spędzonego w zakładce "O stronie" (licznik znajduje się na dole strony).
+    Stworzona funkcja w pliku webWorker.js:
+        timedCount() - co 1000ms zwiększa liczbę spędzonych na stronie sekund.
+    Stworzona funkcja w pliku info.html:
+        startWorker() - rozpoczęcie działania WebWorker, wykonuje się onload.
+
+Walidacja projektu
+    Strony walidują się poprawnie na stronie W3C zgodnie z standardem HTML5 i CSS 3.0.
+    Działanie strony zostało przetestowane na przęglądarkach Safari, Google Chrome, Mozilla Firefox oraz Microsoft Edge.
+
+Zawartość plików .html oraz .css
+    index.html - główna strona domowa, zawiera symulację układu słonecznego oraz ukazuje informacje o poszczególnych planetach po kliknięciu na odpowiednie koło;
+    about.html - zakładka "O Układzie", zawiera ogólne informacje na temat Układu Słonecznego;
+    info.html - zakładka "O stronie", zawiera ogólne informacje na temat stworzonego projektu, autorze projektu, użycie <video>, bibliografie oraz działanie WebWorker.
+    style.css - zawiera style CSS, między innymi rozwinięcie nawigacji on hover jak i zmianę wyglądu kół z inicjałami planet na stronie domowej. Realizuje też przede wszystkim animacje graficzne Układu Słonecznego.
+
+Projekt zawiera również foldery z czcionką (clone-machine), z obrazami (imgs) oraz z plikiem video (media).
+

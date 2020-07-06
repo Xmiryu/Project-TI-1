@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Układ Słoneczny</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+    </head>
+    <body>
+        <nav>
+            <header>Układ Słoneczny</header>
+            <div class="navigation">
+            <li style="float:right" style="border-right: 20px"><a id="top">TOP</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">O Układzie</a></li>
+            <li><a href="info.html">O stronie</a></li>
+            </div>
+        </nav>
+        <svg id="svg" width="100%" height="620" viewBox="0 0 1400 1400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            
+            <radialGradient id = "grad1" cx = "50%" cy = "50%" r = "50%">
+                    <stop stop-color = "yellow" offset = "10%"/>
+                    <stop stop-color = "orange" offset = "60%"/>
+                    <stop stop-color = "#e54c0f" offset = "100%"/>
+            </radialGradient>
+            <circle class="Sun" cx="50%" cy="50%" r="36"/>
+
+            <pattern id="mercury" width="100%" height="100%">
+                <image xlink:href="imgs/mercury.jpg" width="16" height="16" />
+            </pattern>  
+            <circle class="Merkury_orbita" cx="50%" cy="50%" r=70 stroke="#4175f0" fill="none"/>
+            <circle class="Merkury" cx="50%" cy="55%" r="8" fill="url(#mercury)"/>
+
+            <pattern id="venus" width="100%" height="100%">
+                <image xlink:href="imgs/venus.jpg" width="26" height="26" />
+            </pattern>  
+            <circle class="Wenus_orbita" cx="50%" cy="50%" r=140 stroke="#4175f0" fill="none"/>
+            <circle class="Wenus"  cx="50%" cy="60%" r="13" fill="url(#venus)"/>
+
+            <pattern id="earth" width="100%" height="100%">
+                <image xlink:href="imgs/earth.jpg" width="30" height="30" />
+            </pattern>
+            <circle class="Ziemia_orbita" cx="50%" cy="50%" r=210 stroke="#4175f0" fill="none"/>
+            <circle class="Ziemia" cx="50%" cy="65%" r="15" fill="url(#earth)"/>
+
+            <pattern id="mars" width="100%" height="100%">
+                <image xlink:href="imgs/mars.jpg" width="16" height="16" />
+            </pattern>  
+            <circle class="Mars_orbita" cx="50%" cy="50%" r=280 stroke="#4175f0" fill="none"/>
+            <circle class="Mars" cx="50%" cy="70%" r="8" fill="url(#mars)"/>
+
+            <pattern id="jupiter" width="100%" height="100%">
+                <image xlink:href="imgs/jupiter.jpg" width="80" height="80" />
+            </pattern>
+            <circle class="Jowisz_orbita" cx="50%" cy="50%" r=400 stroke="#4175f0" fill="none"/>
+            <circle class="Jowisz" cx="50%" cy="75%" r="40" fill="url(#jupiter)"/>
+
+            <pattern id="saturn" width="100%" height="100%">
+                <image xlink:href="imgs/saturn.jpg" width="70" height="70" />
+            </pattern>            
+            <circle class="Saturn_orbita" cx="50%" cy="50%" r=490 stroke="#4175f0" fill="none"/>
+            <circle class="Saturn" cx="50%" cy="80%" r="35" fill="url(#saturn)"/>
+
+            <pattern id="uranus" width="100%" height="100%">
+                <image xlink:href="imgs/uranus.jpg" width="42" height="42" />
+            </pattern>            
+            <circle class="Uran_orbita" cx="50%" cy="50%" r=600 stroke="#4175f0" fill="none"/>
+            <circle class="Uran" cx="50%" cy="85%" r="21" fill="url(#uranus)"/>
+            
+            <pattern id="neptune" width="100%" height="100%">
+                <image xlink:href="imgs/neptune.jpg" width="40" height="40" />
+            </pattern>
+            <circle class="Neptun_orbita" cx="50%" cy="50%" r=695 stroke="#4175f0" fill="none"/>
+            <circle class="Neptun" cx="50%" cy="90%" r="20" fill="url(#neptune)"/>
+
+        </svg> 
+        <div class="solid_wrapper">
+                <ul>
+                    <li class="Merkury" id="Merkury">M</li>
+                    <li class="Wenus" id="Wenus">W</li>
+                    <li class="Ziemia" id="Ziemia">Z</li>
+                    <li class="Mars" id="Mars">M</li>
+                    <li class="Jowisz" id="Jowisz">J</li>                    
+                    <li class="Saturn" id="Saturn">S</li>
+                    <li class="Uran" id="Uran">U</li>
+                    <li class="Neptun" id="Neptun">N</li>                    
+                </ul>
+        </div>
+        <div class="content">
+            <section id="Merkury_section">
+                <h1>MERKURY</h1>
+                <article>
+                    <p>Średnica równikowa:  4 879 [km]</p>
+                    <p>Masa:  330,2 [10<SUP>21</SUP>kg]</p>
+                    <p>Odległość od słońca:  57 909 170 [km]</p>
+                    <p>Czas obiegu:  87,969 [dni]</p>
+                    <p>Okres obrotu:  58d 15h 26m</p>
+                    <p>Księżyce: 0</p>
+                    <p>Rodzaj planety: skalista</p><br/>
+                </article>
+            </section>
+            <section id="Wenus_section">
+                <h1>WENUS</h1>
+                <article>
+                    <p>Średnica równikowa:  12 104 [km]</p>
+                    <p>Masa:  4 868,5 [10<SUP>21</SUP>kg]</p>
+                    <p>Odległość od słońca:  108 208 926 [km]</p>
+                    <p>Czas obiegu:  224,701 [dni]</p>
+                    <p>Okres obrotu:  243d 0h 27m</p>
+                    <p>Księżyce: 0</p>
+                    <p>Rodzaj planety: skalista</p><br/>
+                </article>
+            </section>
+            <section id="Ziemia_section">
+                <h1>ZIEMIA</h1>
+                <article>
+                    <p>Średnica równikowa:  12 756 [km]</p>
+                    <p>Masa:  5 974,2 [10<SUP>21</SUP>kg]</p>
+                    <p>Odległość od słońca:  149 597 887 [km]</p>
+                    <p>Czas obiegu:  365,256 [dni]</p>
+                    <p>Okres obrotu:  23h 56m 04s</p>
+                    <p>Księżyce: 1</p>
+                    <p>Rodzaj planety: skalista</p><br/>
+                </article>
+            </section>
+            <section id="Mars_section">
+                <h1>MARS</h1>
+                <article>
+                    <p>Średnica równikowa:  6 805 [km]</p>
+                    <p>Masa:  641,9 [10<SUP>21</SUP>kg]</p>
+                    <p>Odległość od słońca:  227 936 637 [km]</p>
+                    <p>Czas obiegu:  686,960 [dni]</p>
+                    <p>Okres obrotu: 24h 37m 23s </p>
+                    <p>Księżyce: 2</p>
+                    <p>Rodzaj planety: skalista</p><br/>
+                </article>
+            </section>
+            <section id="Jowisz_section">
+                <h1>JOWISZ</h1>
+                <article>
+                    <p>Średnica równikowa:  142 984 [km]</p>
+                    <p>Masa:  1 898 600,8 [10<SUP>21</SUP>kg]</p>
+                    <p>Odległość od słońca:  778 412 027 [km]</p>
+                    <p>Czas obiegu:  4 333,287 [dni]</p>
+                    <p>Okres obrotu:  9h 55m 30s</p>
+                    <p>Księżyce: 79</p>
+                    <p>Rodzaj planety: gazowa</p><br/>
+                </article>
+            </section>
+            <section id="Saturn_section">
+                <h1>SATURN</h1>
+                <article>
+                    <p>Średnica równikowa:  120 536 [km]</p>
+                    <p>Masa:  568 516,8 [10<SUP>21</SUP>kg]</p>
+                    <p>Odległość od słońca:  1 426 725 413 [km]</p>
+                    <p>Czas obiegu:  10 756,200 [dni]</p>
+                    <p>Okres obrotu: 10h 39m 22s </p>
+                    <p>Księżyce: 82</p>
+                    <p>Rodzaj planety: gazowa</p><br/>
+                </article>
+            </section>
+            <section id="Uran_section">
+                <h1>URAN</h1>
+                <article>
+                    <p>Średnica równikowa:  51 118 [km]</p>
+                    <p>Masa:  86 841 [10<SUP>21</SUP>kg]</p>
+                    <p>Odległość od słońca:  2 870 972 220 [km]</p>
+                    <p>Czas obiegu:  30 707,490 [dni]</p>
+                    <p>Okres obrotu:  17h 14m 24s</p>
+                    <p>Księżyce: 27</p>
+                    <p>Rodzaj planety: gazowo-lodowa</p><br/>
+                </article>
+            </section>
+            <section id="Neptun_section">
+                <h1>NEPTUN</h1>
+                <article>
+                    <p>Średnica równikowa:  49 528 [km]</p>
+                    <p>Masa:  102 439,6 [10<SUP>21</SUP>kg]</p>
+                    <p>Odległość od słońca:  4 498 252 900 [km]</p>
+                    <p>Czas obiegu:  60 223,353 [dni]</p>
+                    <p>Okres obrotu:  16h 06m 36s</p>
+                    <p>Księżyce: 14</p>
+                    <p>Rodzaj planety: gazowo-lodowa</p><br/>
+                </article>
+            </section>
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

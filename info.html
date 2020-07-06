@@ -1,0 +1,76 @@
+        <!DOCTYPE html>
+        <html lang="pl">
+            <head>
+                <meta charset="utf-8"/>
+                <title>Układ Słoneczny</title>
+                <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+            </head>
+            <body style="height: 100%">
+
+                <nav>
+                    <header>Układ Słoneczny</header>
+                    <div class="navigation">
+                    <li style="float:right" style="border-right: 20px"><a id="top">TOP</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">O Układzie</a></li>
+                    <li><a href="info.html">O stronie</a></li>
+                    </div>
+                </nav>
+                </br>
+                <div class="info">
+                    <header>Techniki Internetowe 2019/2020</header>
+                    <header2>Projekt I</header2><br/><br/>
+                    <article>
+                        Projekt "Układ Słoneczny" zawiera poglądową symulację ruchu planet wokół słońca wykonaną przy uzyciu grafiki wektorowej <b style="color: green">SVG.</b><br/>
+                        Dla każdej z planet wewnętrznych oraz zewnętrznych Układu Słonecznego przedstawione są krótkie opisy.<br/>
+                        W zakładce <b style="color: green">"O Układzie"</b> dostępne są także ogólne informacje na temat Układu Słonecznego.
+			<br/>
+                        <a href="Documentation.txt" style="font-size: small; text-decoration: none; color: green">Dokumentacja</a>
+                    </article>
+                    <br/>
+                    <h2><ins>Autorka projektu:</ins></h2>
+                    <p style="color: green; font-size: x-large; text-shadow: 0 0 10px black;"><b><i>Dorota Stach</i></b></p>
+                    <p>Informatyka Stosowana</p>
+                    <p>Wydział Fizyki i Informatyki Stosowanej</p>
+
+                    <br/>
+                    <video width="450" height="250" autoplay controls muted>
+                        <source src="media/video.mp4" type="video/mp4" />
+                    </video>
+                    
+                    <br/><br/>
+                    <h2><ins>Bibliografia:</ins></h2>
+                    <p><a href="https://pl.wikipedia.org/wiki/Układ_Słoneczny" style="text-decoration: none;">https://pl.wikipedia.org/wiki/Układ_Słoneczny</a></p>
+                    <p><a href="http://www.wiking.edu.pl/article.php?id=39" style="text-decoration: none;">http://www.wiking.edu.pl/article.php?id=39</a></p>
+                    
+                    <br/>
+                    <footer style="font-size: xx-large;">Czas na stronie: <output id="result"></output> s</footer>
+
+
+                    <script>
+			    document.getElementById("top").addEventListener("click", scrollWin_up);
+function scrollWin_up() {
+    window.scrollBy(0, -300);
+}
+                    var w;
+                    
+                    function startWorker() {
+                      if(typeof(Worker) !== "undefined") {
+                        if(typeof(w) == "undefined") {
+                          w = new Worker("webWorker.js");
+                        }
+                        w.onmessage = function(event) {
+                          document.getElementById("result").innerHTML = event.data;
+                        };
+                      } else {
+                        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+                      }
+                    }
+                    window.onload = startWorker();
+                    </script>
+
+                </div>
+                
+            </body>
+        </html>
+        
